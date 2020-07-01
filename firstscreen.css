@@ -1,11 +1,46 @@
 * {
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Poppins';
+    box-sizing: border-box;
+}
+.car {
+    position: absolute;
+    bottom: 3px;
+}
+section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #00fdff url(background.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: 0 0;
+    background-repeat: repeat-x;
+    animation: animate 40s linear infinite;
 }
 h1 {
     font-size: 50px;
-    text-align: center;
-    margin: 0 auto;
-    
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 2px #ffb413;
+    text-transform: uppercase;
+    /* position: absolute;
+    z-index: 1;
+    top: 200px;
+    left: 500px; */
+    /* position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.middle {
+    font-size: 50px;
+    position: absolute;
+    z-index: 1;
+    top: 346px;
+    left: 627px;
 }
 body {
     margin: 0;
@@ -14,17 +49,14 @@ body {
 
 .bg {
     position: relative;
-    background: #00fdff url(background.jpg);
+    /* background: #00fdff url(background.jpg);
     height: 100vh;
     background-size: cover;
     background-position: 0 0;
     background-repeat: repeat-x;
-    animation: animate 40s linear infinite;
+    animation: animate 40s linear infinite; */
 }
-.car {
-    position: absolute;
-    bottom: 0;
-}
+
 @keyframes animate {
     from {
         background-position: 0 0;
