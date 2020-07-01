@@ -64,6 +64,7 @@ function getRandomInt(max) { // Returns a random Integer in the range 0,...,max-
   //push into playerArray
 function arrowKeyDown(event) {
     if (event.key== "ArrowRight"){
+      
         playerArray.push ("right");
         keyComparer();
     }
