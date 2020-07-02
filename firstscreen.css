@@ -18,7 +18,7 @@ section {
     justify-content: center;
     /* align-content: space-around; */
 
-    background: #00fdff url(background.jpg);
+    background: #00fdff url(/Users/candyleong/projects/project1final/arrowkeygame/pictures/background.jpg);
     height: 100vh;
     background-size: cover;
     background-position: 0 0;
@@ -86,7 +86,7 @@ body {
 .modal-content {
     background-color: white;
     border-radius: 10px;
-    font: Poppins;
+    font: Arial;
     margin: 20% auto;
     padding: 20px;
     width: 30%;
