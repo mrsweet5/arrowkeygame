@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href=“https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap” rel=“stylesheet”>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bring Me Home</title>
@@ -11,16 +10,21 @@
 </head>
 <body>
     <section>
-    <img src = "title.png" class="title">
-    <div class = "bg">
-    
-    <img src = "car.png" class="car">
-</div>  
-    <button class = "middle" onclick="location.href = 'gamepage.html';" id="startGameButton"><i class="fas fa-play-circle"></i></button>
-</section>
+        <img src = "title.png" class="title">
+        <div class = "bg">  
+        <img src = "car.png" class="car">
+        </div>  
+        <button class="middle" onclick="location.href = 'gamepage.html';" id="startGameButton"><i class="fas fa-play-circle"></i></button>
+        <button id="modalBtn" class="button">Instructions</button>
+    </section>
+
+    <div id="simpleModal" class="modal">
+        <div class="modal-content">
+            <span class="closeBtn"> &times; </span>
+            <p>Hello...I am a modal</p>
+        </div>
+    </div>
+
+    <script src="script.js"> </script>
 </body>
-
-<script src="script.js">
-    </script>
-
 </html>

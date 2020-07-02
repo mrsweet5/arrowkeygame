@@ -96,21 +96,29 @@ function reverseColorChanger() {
 
 // comparing the cpuArray and playerArray
 function keyComparer(){
-    let index = playerArray.length -1;
-    if (playerArray[index] == cpuArray[index]) {
-        colorChanger(index);
-        if (playerArray.length == cpuArray.length) {
-            cpuArray = [];
-            playerArray = [];
-            score += 10;
-            scoreElement.textContent = score;
-            gameContainer.textContent = "";
-            progressBarWidthNumerator = gameDuration*1000;
-            nextArrow();
-        }
-        }
-    else {
-        reverseColorChanger();
-        playerArray = [];
-        console.log ("you lose") }
+  let index = playerArray.length -1;
+  if (playerArray[index] == cpuArray[index]) {
+      colorChanger(index);
+      if (playerArray.length == cpuArray.length) {
+          cpuArray = [];
+          playerArray = [];
+          score += 10;
+          if (score == 50) {
+            location.href = "https://www.google.com";
+            console.log (score);
+          }
+          else {
+          scoreElement.textContent = score;
+          gameContainer.textContent = "";
+          progressBarWidthNumerator = gameDuration*1000;
+          nextArrow();
+          }
+      }
+      }
+  else {
+      reverseColorChanger();
+      playerArray = [];
+      console.log ("you lose") }
 }
+
+
