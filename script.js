@@ -144,6 +144,7 @@ function keyComparer(){
           playerArray = [];
           score += 10;
           if (score == 50) { 
+            // clearInterval(progressBarInterval); 
             openModal();
             console.log (score);
           }
