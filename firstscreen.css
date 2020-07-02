@@ -55,18 +55,13 @@ body {
 
 }
 
-.button {
+#modalBtn {
+    height: 100px;
     position: absolute;
-    background: coral;
-    padding: 1em 2em;
-    color: white;
-    border: 2px;
+    z-index: 1;
+    top: 300px;
+    left: 700px;
 }
-
-.button:hover {
-    background: #131386;
-}
-
 .modal {
     display: none;
     position: fixed;
@@ -103,4 +98,12 @@ body {
 .cryingboy {
     height: 150px;
     float: right;
+}
+
+.playbutton {
+    height: 100px;
+    position: absolute;
+    z-index: 1;
+    top: 300px;
+    left: 500px;
 }
