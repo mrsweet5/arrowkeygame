@@ -46,28 +46,6 @@ body {
   cursor: default;
 }
 
-#restartGameButton {
-    position: absolute;
-    top: 6px;
-    right: 20px;
-    font-size: 16px;
-    background-color: #ccc;
-    color: #fff;
-    padding: 8px 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    outline: none;
-    transition-duration: 0.2s;
-    transition-property: background-color;
-  }
-  #restartGameButton:hover {
-    background-color: #333;
-  }
-  #restartGameButton:active {
-    background-color: #000;
-  }
-
   .normal {
     color: #00135a;
   }
@@ -77,7 +55,7 @@ body {
   }
 
   #progress-bar-container {
-    padding-top: 20px;
+    margin-top: 20px;
     width: 80%;
     margin: 0 auto 10px auto;
     background-color: #ccc;
@@ -92,3 +70,34 @@ body {
     transition-duration: 0.5s;
     transition-property: background-color;
   }
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index:1;
+    left:0;
+    top:0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 20% auto;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7 20px 0 rgba(0,0,0,0.17);
+}
+
+.closeBtn {
+    color: #ccc;
+    float: right;
+    font-size: 30px;
+}
+.closeBtn:hover,.closeBtn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

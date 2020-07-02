@@ -12,6 +12,43 @@ nextArrow();
 
 document.addEventListener("keydown", arrowKeyDown, false);
 
+//win modal function
+var modal = document.getElementById('simpleModal');
+var closeBtn = document.getElementsByClassName('closeBtn')[0];
+
+closeBtn.addEventListener('click', closeModal);
+
+function openModal(){
+  modal.style.display = 'block';
+}
+
+function closeModal(){
+  modal.style.display = 'none';
+  location.href= "index.html"
+}
+
+//lose modal function
+var modal1 = document.getElementById('simpleModal1');
+var closeBtn1 = document.getElementsByClassName('closeBtn')[1];
+
+closeBtn1.addEventListener('click', closeModal);
+
+function openModal1(){
+  modal1.style.display = 'block';
+}
+
+function closeModal1(){
+  modal1.style.display = 'none';
+  location.href= "index.html"
+}
+
+
+// sound function
+var boinkBoink = document.getElementById('boink');
+function boinkSound() {
+    boinkBoink.play();
+}
+
 // Progress Bar Countdown Timer
 const progressBarElement = document.querySelector("#progress-bar");
 const gameDuration = 6; // Game Duration in seconds
@@ -23,7 +60,7 @@ function progressBarFrame() {
     if (progressBarWidthNumerator <= 0) {
       clearInterval(progressBarInterval); 
       progressBarElement.setAttribute("style", "width: 0%; background-color: #00cc99;");
-      //location.href = "https://www.google.com";
+      openModal1();
     }
     else {
       progressBarWidthNumerator-=10;
@@ -64,20 +101,23 @@ function getRandomInt(max) { // Returns a random Integer in the range 0,...,max-
   //push into playerArray
 function arrowKeyDown(event) {
     if (event.key== "ArrowRight"){
-      
         playerArray.push ("right");
+        boinkSound()
         keyComparer();
     }
     else if (event.key== "ArrowLeft"){
         playerArray.push ("left");
+        boinkSound()
         keyComparer();
     }
     else if (event.key== "ArrowUp"){
         playerArray.push ("up");
+        boinkSound()
         keyComparer();
     }
     else if (event.key== "ArrowDown"){
         playerArray.push ("down");
+        boinkSound()
         keyComparer();
     }
 }
@@ -103,12 +143,11 @@ function keyComparer(){
           cpuArray = [];
           playerArray = [];
           score += 10;
-          if (score == 50) {
-            location.href = "https://www.google.com";
+          if (score == 50) { 
+            openModal();
             console.log (score);
           }
           else {
-          scoreElement.textContent = score;
           gameContainer.textContent = "";
           progressBarWidthNumerator = gameDuration*1000;
           nextArrow();
@@ -118,7 +157,8 @@ function keyComparer(){
   else {
       reverseColorChanger();
       playerArray = [];
-      console.log ("you lose") }
+       }
 }
+
 
 
