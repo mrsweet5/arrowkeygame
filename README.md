@@ -22,7 +22,7 @@ Bring Cryen home before the timer runs out using arrow keys on your keyboard.
 ### Unsolved Problems & Future Plans
 
 - Music autoplay
-- More levels
+- More levels and increased difficulty (reverse directions and more arrow keys)
 - Responsive on other sizes
 
 [Link To Game](https://mrsweet5.github.io/arrowkeygame/index.html)
