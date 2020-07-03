@@ -12,8 +12,6 @@ section {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    /* align-content: space-around; */
-
     background: #00fdff url(pictures/background.jpg);
     height: 100vh;
     background-size: cover;
